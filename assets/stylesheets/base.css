@@ -86,6 +86,7 @@ a:hover {
 .button{
     background-color: rgba(0, 0, 0, 0);
     outline: none;
+    cursor: pointer;
 }
 
 .button:hover{
@@ -98,10 +99,40 @@ a:hover {
 }
 
 .button:focus{
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.3);
     outline: none;
 }
 
 .button:focus i{
-    color: rgba(0, 0, 0, 0.9);
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.button:active{
+    background-color: rgba(255, 255, 255, 0.8);
+    outline: none;
+}
+
+#cate-toast{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    text-align:center;
+}
+
+#cate-toast .toast{
+    color: white;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.highlight{
+    background-color: rgba(255, 255, 255, 0.8);
+    outline: none;
+    color: rgba(0, 0, 0, 0.8) !important;
 }
