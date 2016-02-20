@@ -9,6 +9,7 @@ cate.init = function(){
 
   cate.bindSave();
   cate.bindAutoSave();
+  cate.bindRefresh();
 };
 
 cate.setupAutoSave = function(autoSave){
@@ -33,11 +34,6 @@ cate.bindSave = function(){
   });
 };
 
-cate.saveData = function(){
-  var data = $("#cate-editable").html();
-  Lockr.set("cateData", data);
-};
-
 cate.bindAutoSave = function(){
   $("#cate-autosave").on("click", function(e){
     cate.toggleAutoSave();
@@ -45,6 +41,18 @@ cate.bindAutoSave = function(){
     cate.toggleUnload();
     cate.showToast("auto save toggled..");
   });
+};
+
+cate.bindRefresh = function(){
+  $("#cate-refresh").on("click", function(){
+    Lockr.flush();
+    window.location.reload();
+  });
+};
+
+cate.saveData = function(){
+  var data = $("#cate-editable").html();
+  Lockr.set("cateData", data);
 };
 
 cate.toggleHighlight = function(target, boolean){
