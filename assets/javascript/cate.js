@@ -20,7 +20,7 @@ cate.setupAutoSave = function(autoSave){
 };
 
 cate.loadSaved = function(data){
-  if(date !== undefined && data.length > 0){
+  if(data !== undefined && data.length > 0){
     $("#cate-editable").html(data);
     cate.showToast("saved content loaded..");
   }
