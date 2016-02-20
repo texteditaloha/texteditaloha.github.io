@@ -16,6 +16,7 @@ cate.setupAutoSave = function(autoSave){
     $("#cate-autosave").addClass("highlight");
     cate.showToast("loading saved text..");
   }
+  cate.toggleUnload();
 };
 
 cate.loadSaved = function(data){
