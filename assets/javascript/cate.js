@@ -20,8 +20,8 @@ cate.setupAutoSave = function(autoSave){
 };
 
 cate.loadSaved = function(data){
-  $("#cate-editable").html(data);
   if(data.length > 0){
+    $("#cate-editable").html(data);
     cate.showToast("saved content loaded..");
   }
 };
