@@ -21,7 +21,9 @@ cate.setupAutoSave = function(autoSave){
 
 cate.loadSaved = function(data){
   $("#cate-editable").html(data);
-  cate.showToast("saved content loaded..");
+  if(data.length > 0){
+    cate.showToast("saved content loaded..");
+  }
 };
 
 cate.bindSave = function(){
